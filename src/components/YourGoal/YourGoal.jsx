@@ -1,7 +1,7 @@
 import React from 'react';
-// import YourGoalsDiskt from '../../images/YourGoals-diskt.png';
+import YourGoalsDiskt from '../../images/YourGoals-diskt.png';
 // import YourGoalsDiskt2x from '../../images/YourGoals-diskt@2x.png';
-// import styles from './YourGoalStyle.scss'
+import styles from './YourGoalStyle.css'
 
 // const small = 'YourGoals-mob.png';
 // const medium = 'YourGoals-tab.png';
@@ -11,7 +11,7 @@ export const YourGoal = () => {
   return (
     <div>
       <div>
-        <picture>
+        {/* <picture>
           <source
             media="(min-width: 700px)"
             srcSet="YourGoals-diskt.png 1x, YourGoals-diskt@2x.png 2x"
@@ -26,9 +26,8 @@ export const YourGoal = () => {
             src="YourGoals-mob.png"
             alt="Your Goals"
           />
-        </picture>
-        {/* <img 
-        
+        </picture> */}
+        <img 
         // srcSet="
         // YourGoals-diskt.png 444w,
         // YourGoals-diskt@2x.png 444w,
@@ -45,7 +44,7 @@ export const YourGoal = () => {
         src={YourGoalsDiskt} 
         // src='YourGoals-diskt.png'
         alt='Your Goals'
-        /> */}
+        />
       </div>
       <div>
         <h1>Your goal</h1>
