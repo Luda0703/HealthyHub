@@ -5,13 +5,13 @@
     display: flex;
     padding-left: 150px;
     padding-right: 150px;
-    padding-bottom: 90px;
+    padding-bottom: 66px;
     padding-top: 40px;
     @include tablet-only {
         display: block;
         padding-left: 195px;
         padding-right: 195px;
-        padding-bottom: 244px;
+        padding-bottom: 212px;
         padding-top: 40px;
     }
     @include mobile-only {
@@ -20,6 +20,7 @@
         padding-right: 10px;
         padding-bottom: 24px;
         padding-top: 24px;
+        margin: auto;
        
     }
     .container_picture {
@@ -48,8 +49,12 @@
             text-align: center;          
         }
         @include mobile-only {
+            width: 320px;
+            justify-content: center;
             margin-top: 24px;
-            // text-align: start;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: start;
         }
         .title {
             font-family: $font-regular;
@@ -60,7 +65,7 @@
             @include mobile-only {
                 font-size: 24px;
                 line-height: 1.25;
-                margin-left: 10px;
+               
             }
         }
         .form_checked {
@@ -76,101 +81,39 @@
                 @include mobile-only {
                     font-size: 18px;
                     line-height: 1.33;
-                    margin-left: 10px;
-                }
-                
+                }               
             }
-            .desc {
-                font-family: $font-regular;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 1.43;
-                margin-bottom: 12px;
-                text-align: start;
-                margin-left: 24px;
-                @include mobile-only {
-                    margin-left: 0;
-                }
-            }
-            .container_label_list {
-                 @include tablet-only {
-                
-                margin-bottom: 24px;
-                justify-content: start;
-                @include tablet-only {
-                    margin-right: 25px;
-                    margin-left: 25px;
-                }
-            }
-            }
-            .container_label_item {
-                @include tablet-only {
-                    display: flex;
-                    text-align: start;
-                    margin-bottom: 24px;
-                }
-            }
+            
             .container_label {
-                margin-bottom: 16px;
-                @include tablet-only {
-                    margin-bottom: 0;
-                    margin-right: 16px;
-                    // margin-left: 24px;
-                    width: 110px;
-                } 
-                @include mobile-only{
-                    margin-bottom: 24px;
-                }
                 
-            }
-            .container_label_center {
-                margin-bottom: 16px;
                 @include tablet-only {
-                    margin-bottom: 0;
-                    margin-right: 24px;
-                    width: 110px;
+                    margin: auto;
                 }
                 @include mobile-only{
                     margin-bottom: 24px;
                 }
-            }
-            .container_label_end{
-                margin-bottom: 24px;
-                @include tablet-only {
-                    // margin-bottom: 0;
-                    margin-right: 24px;
-                    width: 110px;
+                .label {
+                    display: block; 
+                    min-width: 212px;
+                    font-family: $font-regular;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.43;
+                    margin-bottom: 12px;
+                    @include tablet-only { 
+                        width: 380px;
+                        text-align: start;
+                        margin: auto;
+                    } 
+                    @include mobile-only {
+                        width: 300px;
+                    }
+                    
                 }
-                @include mobile-only{
-                    margin-bottom: 24px;
-                }
-                
-            }
-            .list{
-                // color: $primary-grey;
-                font-family: $font-regular;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 1.43;
-            }
-            .item {
-                margin-right: 8px;
-                background-color: $primary-black-2;
-                border: $primary-grey; 
-            }
-            .your_age {
-                font-family: $font-regular;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 1.43;
-                margin-bottom: 12px;
-                @include tablet-only {
-                    text-align: start;
-                }
-                
 
-            }
-            .item_input {
+                .item_input {
+                    display: block;
+                    
                     width: 212px;
                     height: 36px;
                     border-radius: 12px;
@@ -180,21 +123,37 @@
                     gap: 10px;
                     background-color: $primary-black-2;
                     color: $primary-grey;
+                    margin-top: 12px;
+                    margin-bottom: 24px;
+                    font-family: $font-regular;
+                    font-weight: 400px;
+                    font-size: 14px;
+                    line-height: 1.43;
                     @include tablet-only {
-                        width: 380px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        min-width: 380px;
                         height: 36px;
                     }
                     @include mobile-only {
-                        width: 300px;
+                        min-width: 300px;
                         height: 36px;
                     
                     }
             }
-           
                 
+            }
+            
+            
+             .container_btn {
+                @include tablet-only {
+                    width: 100%;
+                    display: block;
+                    align-items: center;
+                }
                 .btn {
                     display: block;
-                    width: 212px;
+                    min-width: 212px;
                     height: 36px;
                     padding: 8px, 10px, 8px, 10px;
                     border-radius: 12px;
@@ -207,10 +166,11 @@
                     align-items: center;
                     margin-bottom: 24px;
                     @include tablet-only {
+                        margin: 0 auto;
                         width: 380px;
                         height: 36px;
-                        padding: 8px, 10px, 8px, 10px;
-                        margin-left: 25px;
+                        margin-bottom: 24px;
+                       
                     }
                     @include mobile-only{
                         width: 300px;
@@ -223,7 +183,7 @@
                     display: block;
                     background-color: $primary-black;
                     color: $primary-grey;
-                    width: 212px;
+                    min-width: 212px;
                     height: 36px;
                     font-family: $font-regular;
                     font-weight: 400;
@@ -231,18 +191,16 @@
                     line-height: 1.42;
                     text-align: center;
                     @include tablet-only {
+                        margin: 0 auto;
                         width: 380px;
                         height: 36px;
-                        margin-left: 24px;
                     }
                     @include mobile-only {
                         width: 300px;
                         height: 36px;
                     }
-        
                 }
-          
-            
+             }   
         }
         
     }
